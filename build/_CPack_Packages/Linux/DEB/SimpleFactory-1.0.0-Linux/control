@@ -1,0 +1,9 @@
+Architecture: arm64
+Description: SimpleFactory built using CMake
+Maintainer: apkent@example.com
+Package: simplefactory
+Priority: optional
+Section: devel
+Version: 1.0.0
+Installed-Size: 82
+

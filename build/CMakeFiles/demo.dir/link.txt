@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/demo.dir/src/ConceptualExample.cpp.o CMakeFiles/demo.dir/src/Documents.cpp.o CMakeFiles/demo.dir/src/MobilePhones.cpp.o CMakeFiles/demo.dir/src/Pizza.cpp.o CMakeFiles/demo.dir/src/Points.cpp.o CMakeFiles/demo.dir/src/Program.cpp.o -o demo 

@@ -1,0 +1,18 @@
+Start testing: May 19 16:59 UTC
+----------------------------------------------------------
+1/1 Testing: test
+1/1 Test: test
+Command: "/home/apkent/rk2_simple_factory/build/demo"
+Directory: /home/apkent/rk2_simple_factory/build
+"test" start time: May 19 16:59 UTC
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test" end time: May 19 16:59 UTC
+"test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 19 16:59 UTC
