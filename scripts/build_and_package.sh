@@ -7,6 +7,7 @@ BUILD_DIR="build"
 PACKAGE_DIR="${PROJECT_NAME}_${VERSION}"
 
 echo "=== Building project ==="
+rm -rf ${BUILD_DIR}
 mkdir -p ${BUILD_DIR}
 cd ${BUILD_DIR}
 cmake .. -DBUILD_TESTS=ON
