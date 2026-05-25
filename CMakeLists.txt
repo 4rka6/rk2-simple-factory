@@ -1,25 +1,24 @@
 cmake_minimum_required(VERSION 3.10)
 project(SimpleFactory VERSION 1.0.0)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(demo
-   src/ConceptualExample.cpp
-   src/Documents.cpp
-   src/MobilePhones.cpp
-   src/Pizza.cpp
-   src/Points.cpp
-   src/Program.cpp
+option(BUILD_TESTS "Build tests" OFF)
+
+add_library(factory STATIC 
+    src/Factory.cpp
 )
 
-enable_testing()
-add_test(NAME test COMMAND demo)
+target_include_directories(factory PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-set(CPACK_GENERATOR "DEB")
-set(CPACK_DEBIAN_PACKAGE_MAINTAINER "apkent@example.com")
+if(BUILD_TESTS)
+    enable_testing()
+    add_executable(test_factory tests/test_factory.cpp)
+    target_link_libraries(test_factory factory)
+    add_test(NAME SimpleFactoryTest COMMAND test_factory)
+endif()
 
-install(TARGETS demo DESTINATION /usr/local/bin)
-set(CPACK_GENERATOR "DEB")
-set(CPACK_DEBIAN_PACKAGE_MAINTAINER "apkent@example.com")
 include(CPack)
+set(CPACK_GENERATOR "DEB")
+set(CPACK_DEBIAN_PACKAGE_MAINTAINER "4rka6 <gurkovskija@gmail.com>")
